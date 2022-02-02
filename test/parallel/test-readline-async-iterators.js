@@ -214,7 +214,8 @@ async function testSlowStreamForLeaks() {
   });
 
   let lines = 0;
-  for await (const {} of iterable) {
+  // eslint-disable-next-line no-unused-vars
+  for await (const _ of iterable) {
     lines++;
   }
 
